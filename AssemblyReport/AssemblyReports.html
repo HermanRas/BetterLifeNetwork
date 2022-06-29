@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <style>
+        .bg-gray {
+            background-color: aliceblue;
+        }
+
+        .card {
+            border-width: thick;
+        }
+
+        input[type=checkbox] {
+            /* Double-sized Checkboxes */
+            -ms-transform: scale(2);
+            /* IE */
+            -moz-transform: scale(2);
+            /* FF */
+            -webkit-transform: scale(2);
+            /* Safari and Chrome */
+            -o-transform: scale(2);
+            /* Opera */
+            padding: 10px;
+        }
+
+        .pin-code {
+            padding: 0;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .pin-code input {
+            border: none;
+            text-align: center;
+            width: 48px;
+            height: 48px;
+            font-size: 36px;
+            background-color: #F3F3F3;
+            margin-right: 5px;
+        }
+
+
+
+        .pin-code input:focus {
+            border: 1px solid #573D8B;
+            outline: none;
+        }
+
+
+        .pin-spin::-webkit-outer-spin-button,
+        .pin-spin::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type=number] {
+            text-align: right !important;
+        }
+    </style>
+    <title>Assembly Reports</title>
+</head>
+
+<body style="background-color: #005493;">
+    <div class="container text-center my-3 p-3 rounded" style="background-color: #FFF;">
+        <img src="img/Header.png" style="width:80%;" alt="Header">
+        <h1>Assembly Reports</h1>
+        <!-- Start Page -->
+
+        <div class="card m-1">
+            <div class="card-body">
+                <!-- End Card Title -->
+                <h5 class="card-title">Assembly Information</h5>
+                <!-- End Card Title -->
+                <!-- Start Card Body -->
+                <div class="card-text">
+                    <div class="row">
+                        <div class="col-12 col-sm-3 p-1">
+                            <label class="form-control bg-gray" for="Assembly">Assembly</label>
+                        </div>
+                        <div class="col-12 col-sm-9 p-1">
+                            <select name="Assembly" id="Assembly" class="form-control"
+                                style="background-color: lightpink;">
+                                <option value="">Please Select Assembly</option>
+                                <option value="">Example Assembly 1</option>
+                                <option value="">Example Assembly 2</option>
+                                <option value="">Example Assembly 3</option>
+                                <option value="">Example Assembly 4</option>
+                                <option value="">Example Assembly 5</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-sm-3 p-1">
+                            <label class="form-control bg-gray" for="Assembly">Date for Period</label>
+                        </div>
+                        <div class="col-12 col-sm-9  p-1">
+                            <input type="date" name="Date" id="Date" class="form-control"
+                                style="background-color: lightpink;">
+                        </div>
+
+                        <h1>Assembly PIN Code</h1>
+                        <div class="pin-code">
+                            <input class="pin-spin" type="number" maxlength="1" autofocus>
+                            <input class="pin-spin" type="number" maxlength="1">
+                            <input class="pin-spin" type="number" maxlength="1">
+                            <input class="pin-spin" type="number" maxlength="1">
+                        </div>
+                    </div>
+                </div>
+                <!-- End Card Body -->
+            </div>
+        </div>
+
+        <!-- Bar -->
+        <div class="card m-1">
+            <div class="card-body">
+                <!-- End Card Title -->
+                <h5 class="card-title">Bar Chart Report</h5>
+                <!-- End Card Title -->
+                <!-- Start Card Body -->
+                <div class="card-text">
+                    <div class="row">
+                        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+                        <div id="chart_div"></div>
+                        <script>
+                            google.charts.load('current', { packages: ['corechart', 'bar'] });
+                            google.charts.setOnLoadCallback(drawAnnotations);
+
+                            function drawAnnotations() {
+                                var data = new google.visualization.DataTable();
+                                data.addColumn('timeofday', 'Time of Day');
+                                data.addColumn('number', 'Motivation Level');
+                                data.addColumn({ type: 'string', role: 'annotation' });
+                                data.addColumn('number', 'Energy Level');
+                                data.addColumn({ type: 'string', role: 'annotation' });
+
+                                data.addRows([
+                                    [{ v: [8, 0, 0], f: '8 am' }, 1, '1', .25, '.2'],
+                                    [{ v: [9, 0, 0], f: '9 am' }, 2, '2', .5, '.5'],
+                                    [{ v: [10, 0, 0], f: '10 am' }, 3, '3', 1, '1'],
+                                    [{ v: [11, 0, 0], f: '11 am' }, 4, '4', 2.25, '2'],
+                                    [{ v: [12, 0, 0], f: '12 pm' }, 5, '5', 2.25, '2'],
+                                    [{ v: [13, 0, 0], f: '1 pm' }, 6, '6', 3, '3'],
+                                    [{ v: [14, 0, 0], f: '2 pm' }, 7, '7', 3.25, '3'],
+                                    [{ v: [15, 0, 0], f: '3 pm' }, 8, '8', 5, '5'],
+                                    [{ v: [16, 0, 0], f: '4 pm' }, 9, '9', 6.5, '6'],
+                                    [{ v: [17, 0, 0], f: '5 pm' }, 10, '10', 10, '10'],
+                                ]);
+
+                                var options = {
+                                    title: 'Motivation and Energy Level Throughout the Day',
+                                    annotations: {
+                                        alwaysOutside: true,
+                                        textStyle: {
+                                            fontSize: 14,
+                                            color: '#000',
+                                            auraColor: 'none'
+                                        }
+                                    },
+                                    hAxis: {
+                                        title: 'Time of Day',
+                                        format: 'h:mm a',
+                                        viewWindow: {
+                                            min: [7, 30, 0],
+                                            max: [17, 30, 0]
+                                        }
+                                    },
+                                    vAxis: {
+                                        title: 'Rating (scale of 1-10)'
+                                    }
+                                };
+
+                                var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+                                chart.draw(data, options);
+                            }
+                        </script>
+                    </div>
+                </div>
+                <!-- End Card Body -->
+            </div>
+        </div>
+
+        <!-- Bubble -->
+        <div class="card m-1">
+            <div class="card-body">
+                <!-- End Card Title -->
+                <h5 class="card-title">Bubble Chart Report</h5>
+                <!-- End Card Title -->
+                <!-- Start Card Body -->
+                <div class="card-text">
+                    <div class="row">
+                        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+                        <div id="series_chart_div" style="width: 900px; height: 500px;"></div>
+
+                        <script>
+                            google.charts.load('current', { 'packages': ['corechart'] });
+                            google.charts.setOnLoadCallback(drawSeriesChart);
+
+                            function drawSeriesChart() {
+
+                                var data = google.visualization.arrayToDataTable([
+                                    ['ID', 'Life Expectancy', 'Fertility Rate', 'Region', 'Population'],
+                                    ['CAN', 80.66, 1.67, 'North America', 33739900],
+                                    ['DEU', 79.84, 1.36, 'Europe', 81902307],
+                                    ['DNK', 78.6, 1.84, 'Europe', 5523095],
+                                    ['EGY', 72.73, 2.78, 'Middle East', 79716203],
+                                    ['GBR', 80.05, 2, 'Europe', 61801570],
+                                    ['IRN', 72.49, 1.7, 'Middle East', 73137148],
+                                    ['IRQ', 68.09, 4.77, 'Middle East', 31090763],
+                                    ['ISR', 81.55, 2.96, 'Middle East', 7485600],
+                                    ['RUS', 68.6, 1.54, 'Europe', 141850000],
+                                    ['USA', 78.09, 2.05, 'North America', 307007000]
+                                ]);
+
+                                var options = {
+                                    title: 'Fertility rate vs life expectancy in selected countries (2010).' +
+                                        ' X=Life Expectancy, Y=Fertility, Bubble size=Population, Bubble color=Region',
+                                    hAxis: { title: 'Life Expectancy' },
+                                    vAxis: { title: 'Fertility Rate' },
+                                    bubble: { textStyle: { fontSize: 11 } }
+                                };
+
+                                var chart = new google.visualization.BubbleChart(document.getElementById('series_chart_div'));
+                                chart.draw(data, options);
+                            }                        </script>
+                    </div>
+                </div>
+                <!-- End Card Body -->
+            </div>
+        </div>
+
+        <!-- Pie -->
+        <div class="card m-1">
+            <div class="card-body">
+                <!-- End Card Title -->
+                <h5 class="card-title">Pie Chart Report</h5>
+                <!-- End Card Title -->
+                <!-- Start Card Body -->
+                <div class="card-text">
+                    <div class="row">
+                        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+                        <div id="piechart_3d" style="width: 900px; height: 500px;"></div>
+
+                        <script>
+                            google.charts.load("current", { packages: ["corechart"] });
+                            google.charts.setOnLoadCallback(drawChart);
+                            function drawChart() {
+                                var data = google.visualization.arrayToDataTable([
+                                    ['Task', 'Hours per Day'],
+                                    ['Work', 11],
+                                    ['Eat', 2],
+                                    ['Commute', 2],
+                                    ['Watch TV', 2],
+                                    ['Sleep', 7]
+                                ]);
+
+                                var options = {
+                                    title: 'My Daily Activities',
+                                    is3D: true,
+                                };
+
+                                var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+                                chart.draw(data, options);
+                            }    
+                        </script>
+                    </div>
+                </div>
+                <!-- End Card Body -->
+            </div>
+        </div>
+
+        <!-- Donutchart -->
+        <div class="card m-1">
+            <div class="card-body">
+                <!-- End Card Title -->
+                <h5 class="card-title">Donutchart Chart Report</h5>
+                <!-- End Card Title -->
+                <!-- Start Card Body -->
+                <div class="card-text">
+                    <div class="row">
+                        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+                        <div id="donutchart" style="width: 900px; height: 500px;"></div>
+
+                        <script>
+                            google.charts.load("current", { packages: ["corechart"] });
+                            google.charts.setOnLoadCallback(drawChart);
+                            function drawChart() {
+                                var data = google.visualization.arrayToDataTable([
+                                    ['Task', 'Hours per Day'],
+                                    ['Work', 11],
+                                    ['Eat', 2],
+                                    ['Commute', 2],
+                                    ['Watch TV', 2],
+                                    ['Sleep', 7]
+                                ]);
+
+                                var options = {
+                                    title: 'My Daily Activities',
+                                    pieHole: 0.4,
+                                };
+
+                                var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+                                chart.draw(data, options);
+                            }   
+                        </script>
+                    </div>
+                </div>
+                <!-- End Card Body -->
+            </div>
+        </div>
+
+
+        <div class="card m-1">
+            <div class="card-body">
+                <!-- Start Card Title -->
+                <!-- End Card Title -->
+                <!-- Start Card Body -->
+                <div class="card-text">
+                    <div class="row">
+                        <div class="col-12 p-1">
+                            <input type="submit" name="home" id="home" class="form-control btn btn-success" value="Home"
+                                onclick="window.location.href = 'index.html';">
+                        </div>
+                    </div>
+                </div>
+                <!-- End Card Body -->
+            </div>
+        </div>
+        <br><br><br><br><br>
+        <!-- End Page -->
+    </div>
+
+    <script>
+        //var pinContainer = document.getElementsByClassName("pin-code")[0];
+        var pinContainer = document.querySelector(".pin-code");
+        console.log('There is ' + pinContainer.length + ' Pin Container on the page.');
+
+        pinContainer.addEventListener('keyup', function (event) {
+            var target = event.srcElement;
+
+            var maxLength = parseInt(target.attributes["maxlength"].value, 10);
+            var myLength = target.value.length;
+
+            if (myLength >= maxLength) {
+                var next = target;
+                while (next = next.nextElementSibling) {
+                    if (next == null) break;
+                    if (next.tagName.toLowerCase() == "input") {
+                        next.focus();
+                        break;
+                    }
+                }
+            }
+
+            if (myLength === 0) {
+                var next = target;
+                while (next = next.previousElementSibling) {
+                    if (next == null) break;
+                    if (next.tagName.toLowerCase() == "input") {
+                        next.focus();
+                        break;
+                    }
+                }
+            }
+
+            if (target.value === '4') {
+                alert("Welcome X from Assembly")
+            }
+
+        }, false);
+
+        pinContainer.addEventListener('keydown', function (event) {
+            var target = event.srcElement;
+            target.value = "";
+        }, false);
+    </script>
+</body>
+
+</html>

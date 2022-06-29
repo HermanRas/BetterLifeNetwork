@@ -77,73 +77,77 @@
         <h1>Assembly Membership Management</h1>
         <!-- Start Page -->
 
-        <!-- Assembly login -->
-        <div class="card m-1">
-            <div class="card-body">
-                <!-- End Card Title -->
-                <h5 class="card-title">Assembly Information</h5>
-                <!-- End Card Title -->
-                <!-- Start Card Body -->
-                <div class="card-text">
-                    <div class="row">
-                        <div class="col-12 col-sm-3 p-1">
-                            <label class="form-control bg-gray" for="Assembly">Assembly</label>
-                        </div>
-                        <div class="col-12 col-sm-9 p-1">
-                            <select name="Assembly" id="Assembly" class="form-control"
-                                style="background-color: lightpink;">
-                                <option value="">Please Select Assembly</option>
-                                <option value="">Example Assembly 1</option>
-                                <option value="">Example Assembly 2</option>
-                                <option value="">Example Assembly 3</option>
-                                <option value="">Example Assembly 4</option>
-                                <option value="">Example Assembly 5</option>
-                            </select>
-                        </div>
-
-                        <h1>Assembly PIN Code</h1>
-                        <div class="pin-code">
-                            <input class="pin-spin" type="number" maxlength="1" autofocus>
-                            <input class="pin-spin" type="number" maxlength="1">
-                            <input class="pin-spin" type="number" maxlength="1">
-                            <input class="pin-spin" type="number" maxlength="1">
-                        </div>
-                    </div>
-                </div>
-                <!-- End Card Body -->
-            </div>
-        </div>
-
         <!-- Membership -->
         <div class="card m-1">
             <div class="card-body">
                 <!-- End Card Title -->
-                <h5 class="card-title">Members</h5>
+                <h5 class="card-title">New Member</h5>
                 <!-- End Card Title -->
                 <!-- Start Card Body -->
                 <div class="card-text">
                     <div class="row">
+
                         <div class="col-12 col-sm-4 p-1">
-                            <label class="form-control bg-gray" for="SundaySchool">Member Add/Update</label>
+                            <label class="form-control bg-gray" for="fname">First Name</label>
                         </div>
                         <div class="col-12 col-sm-8 p-1">
-                            <select name="Assembly" id="Assembly" class="form-control"
-                                style="background-color: lightpink;" onchange="window.location.href = 'Member.html';">
-                                <option value="">Please Select Member or New</option>
-                                <option value="+">+ New Member</option>
-                                <option value="">Example Assembly Member 1</option>
-                                <option value="">Example Assembly Member 2</option>
-                                <option value="">Example Assembly Member 3</option>
-                                <option value="">Example Assembly Member 4</option>
-                                <option value="">Example Assembly Member 5</option>
+                            <input type="text" name="fname" id="fname" class="form-control" placeholder="Fist Name">
+                        </div>
+
+                        <div class="col-12 col-sm-4 p-1">
+                            <label class="form-control bg-gray" for="lname">Last Name</label>
+                        </div>
+                        <div class="col-12 col-sm-8 p-1">
+                            <input type="text" name="lname" id="lname" class="form-control" placeholder="Last Name">
+                        </div>
+
+                        <div class="col-12 col-sm-4 p-1">
+                            <label class="form-control bg-gray" for="kname">Known As</label>
+                        </div>
+                        <div class="col-12 col-sm-8 p-1">
+                            <input type="text" name="kname" id="kname" class="form-control" placeholder="Known As Name">
+                        </div>
+
+                        <div class="col-12 col-sm-4 p-1">
+                            <label class="form-control bg-gray" for="contact">Contact Number</label>
+                        </div>
+                        <div class="col-12 col-sm-8 p-1">
+                            <input type="tel" name="contact" id="contact" class="form-control"
+                                placeholder="072 123 4567">
+                        </div>
+
+                        <div class="col-12 col-sm-4 p-1">
+                            <label class="form-control bg-gray" for="email">Contact Email</label>
+                        </div>
+                        <div class="col-12 col-sm-8 p-1">
+                            <input type="email" name="email" id="email" class="form-control"
+                                placeholder="user@mail.com">
+                        </div>
+
+                        <div class="col-12 col-sm-4 p-1">
+                            <label class="form-control bg-gray" for="gender">Gender</label>
+                        </div>
+                        <div class="col-12 col-sm-8 p-1">
+                            <select name="gender" id="gender" class="form-control" placeholder="user@mail.com">
+                                <option value="M">Male</option>
+                                <option value="F">Female</option>
+                                <option value="O">Not Spesified</option>
                             </select>
                         </div>
+
+                        <div class="col-12 col-sm-4 p-1">
+                            <label class="form-control bg-gray" for="Assembly">Date Joined</label>
+                        </div>
+                        <div class="col-12 col-sm-8  p-1">
+                            <input type="date" name="Date" id="Date" class="form-control">
+                        </div>
+
+
                     </div>
                 </div>
                 <!-- End Card Body -->
             </div>
         </div>
-
 
         <div class="card m-1">
             <div class="card-body">
@@ -152,9 +156,13 @@
                 <!-- Start Card Body -->
                 <div class="card-text">
                     <div class="row">
-                        <div class="col-12 p-1">
-                            <input type="submit" name="home" id="home" class="form-control btn btn-success" value="Home"
+                        <div class="col-12 col-sm-6 p-1">
+                            <input type="submit" name="save" id="Save" class="form-control btn btn-success" value="Save"
                                 onclick="window.location.href = 'index.html';">
+                        </div>
+                        <div class="col-12 col-sm-6 p-1">
+                            <input type="reset" name="cancel" id="Cancel" class="form-control btn btn-danger"
+                                value="Cancel" onclick="window.location.href = 'index.html';">
                         </div>
                     </div>
                 </div>
