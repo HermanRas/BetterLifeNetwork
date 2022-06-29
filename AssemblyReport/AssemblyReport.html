@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <style>
+        .bg-gray {
+            background-color: aliceblue;
+        }
+
+        .card {
+            border-width: thick;
+        }
+
+        input[type=checkbox] {
+            /* Double-sized Checkboxes */
+            -ms-transform: scale(2);
+            /* IE */
+            -moz-transform: scale(2);
+            /* FF */
+            -webkit-transform: scale(2);
+            /* Safari and Chrome */
+            -o-transform: scale(2);
+            /* Opera */
+            padding: 10px;
+        }
+
+        .pin-code {
+            padding: 0;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .pin-code input {
+            border: none;
+            text-align: center;
+            width: 48px;
+            height: 48px;
+            font-size: 36px;
+            background-color: #F3F3F3;
+            margin-right: 5px;
+        }
+
+
+
+        .pin-code input:focus {
+            border: 1px solid #573D8B;
+            outline: none;
+        }
+
+
+        .pin-spin::-webkit-outer-spin-button,
+        .pin-spin::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type=number] {
+            text-align: right !important;
+        }
+    </style>
+    <title>Weekly Assembly Report</title>
+</head>
+
+<body style="background-color: #005493;">
+    <div class="container text-center my-3 p-3 rounded" style="background-color: #FFF;">
+        <img src="img/Header.png" style="width:80%;" alt="Header">
+        <h1>Weekly Assembly Report</h1>
+        <!-- Start Page -->
+
+        <div class="card m-1">
+            <div class="card-body">
+                <!-- End Card Title -->
+                <h5 class="card-title">Assembly Information</h5>
+                <!-- End Card Title -->
+                <!-- Start Card Body -->
+                <div class="card-text">
+                    <div class="row">
+                        <div class="col-12 col-sm-3 p-1">
+                            <label class="form-control bg-gray" for="Assembly">Assembly</label>
+                        </div>
+                        <div class="col-12 col-sm-9 p-1">
+                            <select name="Assembly" id="Assembly" class="form-control"
+                                style="background-color: lightpink;">
+                                <option value="">Please Select Assembly</option>
+                                <option value="">Example Assembly 1</option>
+                                <option value="">Example Assembly 2</option>
+                                <option value="">Example Assembly 3</option>
+                                <option value="">Example Assembly 4</option>
+                                <option value="">Example Assembly 5</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-sm-3 p-1">
+                            <label class="form-control bg-gray" for="Assembly">Date for Period</label>
+                        </div>
+                        <div class="col-12 col-sm-9  p-1">
+                            <input type="date" name="Date" id="Date" class="form-control"
+                                style="background-color: lightpink;">
+                        </div>
+
+                        <h1>Assembly PIN Code</h1>
+                        <div class="pin-code">
+                            <input class="pin-spin" type="number" maxlength="1" autofocus>
+                            <input class="pin-spin" type="number" maxlength="1">
+                            <input class="pin-spin" type="number" maxlength="1">
+                            <input class="pin-spin" type="number" maxlength="1">
+                        </div>
+                    </div>
+                </div>
+                <!-- End Card Body -->
+            </div>
+        </div>
+
+        <div class="card m-1">
+            <div class="card-body">
+                <!-- End Card Title -->
+                <h5 class="card-title">Income</h5>
+                <!-- End Card Title -->
+                <!-- Start Card Body -->
+                <div class="card-text">
+                    <div class="row">
+                        <div class="col-12 col-sm-3 p-1">
+                            <label class="form-control bg-gray" for="Tithes">Tithes</label>
+                        </div>
+                        <div class="col-12 col-sm-9 p-1">
+                            <input type="number" class="form-control" name="Tithes" id="Tithes" min="0" value="0.00"
+                                step="0.1">
+                        </div>
+
+                        <div class="col-12 col-sm-3 p-1">
+                            <label class="form-control bg-gray" for="AssemblyOfferings">Assembly Offerings</label>
+                        </div>
+                        <div class="col-12 col-sm-9 p-1">
+                            <input type="number" class="form-control" name="AssemblyOfferings" id="AssemblyOfferings"
+                                min="0" value="0.00" step="0.1">
+                        </div>
+
+                        <div class="col-12 col-sm-3 p-1">
+                            <label class="form-control bg-gray" for="SundaySchool">Sunday School</label>
+                        </div>
+                        <div class="col-12 col-sm-9 p-1">
+                            <input type="number" class="form-control" name="SundaySchool" id="SundaySchool" min="0"
+                                value="0.00" step="0.1">
+                        </div>
+
+                        <div class="col-12 col-sm-3 p-1">
+                            <label class="form-control bg-gray" for="Youth">Youth</label>
+                        </div>
+                        <div class="col-12 col-sm-9 p-1">
+                            <input type="number" class="form-control" name="Youth" id="Youth" min="0" value="0.00"
+                                step="0.1">
+                        </div>
+
+                        <div class="col-12 col-sm-3 p-1">
+                            <label class="form-control bg-gray" for="Women">Women</label>
+                        </div>
+                        <div class="col-12 col-sm-9 p-1">
+                            <input type="number" class="form-control" name="Women" id="Women" min="0" value="0.00"
+                                step="0.1">
+                        </div>
+
+                        <div class="col-12 col-sm-3 p-1">
+                            <label class="form-control bg-gray" for="Men">Men</label>
+                        </div>
+                        <div class="col-12 col-sm-9 p-1">
+                            <input type="number" class="form-control" name="Men" id="Men" min="0" value="0.00"
+                                step="0.1">
+                        </div>
+
+                        <div class="col-12 col-sm-3 p-1">
+                            <label class="form-control bg-gray" for="Welfare">Welfare</label>
+                        </div>
+                        <div class="col-12 col-sm-9 p-1">
+                            <input type="number" class="form-control" name="Welfare" id="Welfare" min="0" value="0.00"
+                                step="0.1">
+                        </div>
+
+                        <div class="col-12 col-sm-3 p-1">
+                            <label class="form-control bg-gray" for="Conference">Conference</label>
+                        </div>
+                        <div class="col-12 col-sm-9 p-1">
+                            <input type="number" class="form-control" name="Conference" id="Conference" min="0"
+                                value="0.00" step="0.1">
+                        </div>
+
+                        <div class="col-12 col-sm-3 p-1">
+                            <label class="form-control bg-gray" for="Conference">Conference</label>
+                        </div>
+                        <div class="col-12 col-sm-9 p-1">
+                            <input type="number" class="form-control" name="Conference" id="Conference" min="0"
+                                value="0.00" step="0.1">
+                        </div>
+
+                        <div class="col-12 col-sm-3 p-1">
+                            <label class="form-control bg-gray" for="Other">Other:</label>
+                        </div>
+                        <div class="col-12 col-sm-4 p-1">
+                            <input type="number" class="form-control" name="Other" id="Other" min="0" value="0.00"
+                                step="0.1">
+                        </div>
+                        <div class="col-12 col-sm-5 p-1">
+                            <input type="text" class="form-control" name="OtherText" id="OtherText"
+                                placeholder="specify">
+                        </div>
+
+                        <hr>
+
+                        <div class="col-12 col-sm-3 p-1">
+                            <label class="form-control bg-info" for="incomeTotal"><b>Income Total</b></label>
+                        </div>
+                        <div class="col-12 col-sm-9 p-1">
+                            <input type="number" class="form-control" name="incomeTotal" id="incomeTotal" min="0"
+                                value="0.00" step="0.1" style="background-color: lightpink;">
+                        </div>
+
+                    </div>
+                </div>
+                <!-- End Card Body -->
+            </div>
+        </div>
+
+        <div class="card m-1">
+            <div class="card-body">
+                <!-- End Card Title -->
+                <h5 class="card-title">Expenses</h5>
+                <!-- End Card Title -->
+                <!-- Start Card Body -->
+                <div class="card-text">
+                    <div class="row">
+                        <div class="col-12 col-sm-3 p-1">
+                            <label class="form-control bg-gray" for="salariesWages">Salaries & Wages</label>
+                        </div>
+                        <div class="col-12 col-sm-9 p-1">
+                            <input type="number" class="form-control" name="salariesWages" id="salariesWages" min="0"
+                                value="0.00" step="0.1">
+                        </div>
+
+                        <div class="col-12 col-sm-3 p-1">
+                            <label class="form-control bg-gray" for="Electricity">Electricity</label>
+                        </div>
+                        <div class="col-12 col-sm-9 p-1">
+                            <input type="number" class="form-control" name="Electricity" id="Electricity" min="0"
+                                value="0.00" step="0.1">
+                        </div>
+
+                        <div class="col-12 col-sm-3 p-1">
+                            <label class="form-control bg-gray" for="CleaningMaterials">Cleaning Materials</label>
+                        </div>
+                        <div class="col-12 col-sm-9 p-1">
+                            <input type="number" class="form-control" name="CleaningMaterials" id="CleaningMaterials"
+                                min="0" value="0.00" step="0.1">
+                        </div>
+
+                        <div class="col-12 col-sm-3 p-1">
+                            <label class="form-control bg-gray" for="Stationery">Stationery</label>
+                        </div>
+                        <div class="col-12 col-sm-9 p-1">
+                            <input type="number" class="form-control" name="Stationery" id="Stationery" min="0"
+                                value="0.00" step="0.1">
+                        </div>
+
+                        <div class="col-12 col-sm-3 p-1">
+                            <label class="form-control bg-gray" for="OtherExpenses">Other:</label>
+                        </div>
+                        <div class="col-12 col-sm-4 p-1">
+                            <input type="number" class="form-control" name="OtherExpenses" id="OtherExpenses" min="0"
+                                value="0.00" step="0.1">
+                        </div>
+                        <div class="col-12 col-sm-5 p-1">
+                            <input type="text" class="form-control" name="OtherText" id="OtherText"
+                                placeholder="specify">
+                        </div>
+
+                        <hr>
+
+                        <div class="col-12 col-sm-3 p-1">
+                            <label class="form-control bg-info" for="expensesTotal"><b>Expenses Total</b></label>
+                        </div>
+                        <div class="col-12 col-sm-9 p-1">
+                            <input type="number" class="form-control" name="expensesTotal" id="expensesTotal" min="0"
+                                value="0.00" step="0.1" style="background-color: lightpink;">
+                        </div>
+
+                    </div>
+                </div>
+                <!-- End Card Body -->
+            </div>
+        </div>
+
+        <div class="card m-1">
+            <div class="card-body">
+                <!-- End Card Title -->
+                <h5 class="card-title">Statutory Payments</h5>
+                <!-- End Card Title -->
+                <!-- Start Card Body -->
+                <div class="card-text">
+                    <div class="row">
+                        <div class="col-12 col-sm-3 p-1">
+                            <label class="form-control bg-gray" for="statutoryFunds">Statutory Funds</label>
+                        </div>
+                        <div class="col-12 col-sm-9 p-1">
+                            <input type="number" class="form-control" name="statutoryFunds" id="statutoryFunds" min="0"
+                                value="0.00" step="0.1">
+                        </div>
+
+                        <div class="col-12 col-sm-3 p-1">
+                            <label class="form-control bg-gray" for="PAYE">PAYE</label>
+                        </div>
+                        <div class="col-12 col-sm-9 p-1">
+                            <input type="number" class="form-control" name="PAYE" id="PAYE" min="0" value="0.00"
+                                step="0.1">
+                        </div>
+
+                        <div class="col-12 col-sm-3 p-1">
+                            <label class="form-control bg-gray" for="UIF">UIF</label>
+                        </div>
+                        <div class="col-12 col-sm-9 p-1">
+                            <input type="number" class="form-control" name="UIF" id="UIF" min="0" value="0.00"
+                                step="0.1">
+                        </div>
+
+                        <div class="col-12 col-sm-3 p-1">
+                            <label class="form-control bg-gray" for="Levies">Levies</label>
+                        </div>
+                        <div class="col-12 col-sm-9 p-1">
+                            <input type="number" class="form-control" name="Levies" id="Levies" min="0" value="0.00"
+                                step="0.1">
+                        </div>
+
+                        <div class="col-12 col-sm-3 p-1">
+                            <label class="form-control bg-gray" for="compensationComm">Compensation Comm</label>
+                        </div>
+                        <div class="col-12 col-sm-9 p-1">
+                            <input type="number" class="form-control" name="compensationComm" id="compensationComm"
+                                min="0" value="0.00" step="0.1">
+                        </div>
+
+                        <hr>
+
+                        <div class="col-12 col-sm-3 p-1">
+                            <label class="form-control bg-info" for="statutoryTotal"><b>Statutory Total</b></label>
+                        </div>
+                        <div class="col-12 col-sm-9 p-1">
+                            <input type="number" class="form-control" name="statutoryTotal" id="statutoryTotal" min="0"
+                                value="0.00" step="0.1" style="background-color: lightpink;">
+                        </div>
+
+                    </div>
+                </div>
+                <!-- End Card Body -->
+            </div>
+        </div>
+
+        <div class="card m-1">
+            <div class="card-body">
+                <!-- End Card Title -->
+                <h5 class="card-title">Activities</h5>
+                <!-- End Card Title -->
+                <!-- Start Card Body -->
+                <div class="card-text">
+                    <div class="row">
+                        <div class="col-12 col-sm-3 p-1">
+                            <label class="form-control bg-gray" for="Baptisms">Baptisms</label>
+                        </div>
+                        <div class="col-12 col-sm-9 p-1">
+                            <input type="number" class="form-control" name="Baptisms" id="Baptisms" min="0" value="0"
+                                step="1">
+                        </div>
+
+                        <div class="col-12 col-sm-3 p-1">
+                            <label class="form-control bg-gray" for="Marriages">Marriages</label>
+                        </div>
+                        <div class="col-12 col-sm-9 p-1">
+                            <input type="number" class="form-control" name="Marriages" id="Marriages" min="0" value="0"
+                                step="1">
+                        </div>
+
+                        <div class="col-12 col-sm-3 p-1">
+                            <label class="form-control bg-gray" for="Births">Births</label>
+                        </div>
+                        <div class="col-12 col-sm-9 p-1">
+                            <input type="number" class="form-control" name="Births" id="Births" min="0" value="0"
+                                step="1">
+                        </div>
+
+                        <div class="col-12 col-sm-3 p-1">
+                            <label class="form-control bg-gray" for="Dedications">Dedications</label>
+                        </div>
+                        <div class="col-12 col-sm-9 p-1">
+                            <input type="number" class="form-control" name="Dedications" id="Dedications" min="0"
+                                value="0" step="1">
+                        </div>
+
+                        <div class="col-12 col-sm-3 p-1">
+                            <label class="form-control bg-gray" for="Funerals">Funerals</label>
+                        </div>
+                        <div class="col-12 col-sm-9 p-1">
+                            <input type="number" class="form-control" name="Funerals" id="Funerals" min="0" value="0"
+                                step="1">
+                        </div>
+
+                        <hr>
+
+                        <div class="col-12 col-sm-3 p-1">
+                            <label class="form-control bg-info" for="activitiesTotal"><b>Activities Total</b></label>
+                        </div>
+                        <div class="col-12 col-sm-9 p-1">
+                            <input type="number" class="form-control" name="activitiesTotal" id="activitiesTotal"
+                                min="0" value="0" step="1">
+                        </div>
+                    </div>
+                </div>
+                <!-- End Card Body -->
+            </div>
+        </div>
+
+        <div class="card m-1">
+            <div class="card-body">
+                <!-- End Card Title -->
+                <h5 class="card-title">Attendance</h5>
+                <!-- End Card Title -->
+                <!-- Start Card Body -->
+                <div class="card-text">
+                    <div class="row">
+                        <div class="col-12 col-sm-3 p-1">
+                            <label class="form-control bg-gray" for="Assembly">Assembly
+                                <small>(combined)</small></label>
+                        </div>
+                        <div class="col-12 col-sm-9 p-1">
+                            <input type="number" class="form-control" name="Assembly" id="Assembly" min="0" value="0"
+                                step="1">
+                        </div>
+
+                        <div class="col-12 col-sm-3 p-1">
+                            <label class="form-control bg-gray" for="SundaySchool">Sunday School</label>
+                        </div>
+                        <div class="col-12 col-sm-9 p-1">
+                            <input type="number" class="form-control" name="SundaySchool" id="SundaySchool" min="0"
+                                value="0" step="1">
+                        </div>
+
+                        <hr>
+
+                        <div class="col-12 col-sm-3 p-1">
+                            <label class="form-control bg-info" for="attendanceTotal"><b>Attendance Total</b></label>
+                        </div>
+                        <div class="col-12 col-sm-9 p-1">
+                            <input type="number" class="form-control" name="attendanceTotal" id="attendanceTotal"
+                                min="0" value="0" step="1" style="background-color: lightpink;">
+                        </div>
+                    </div>
+                </div>
+                <!-- End Card Body -->
+            </div>
+        </div>
+
+        <div class="card m-1">
+            <div class="card-body">
+                <!-- End Card Title -->
+                <h5 class="card-title">Bank Deposits</h5>
+                <!-- End Card Title -->
+                <!-- Start Card Body -->
+                <div class="card-text">
+                    <div class="row">
+                        <div class="col-12 col-sm-4 p-1">
+                            <input type="text" name="depositDesc" id="depositDesc" class="form-control"
+                                placeholder="Deposit Description">
+                        </div>
+                        <div class="col-12 col-sm-4 p-1">
+                            <input type="date" name="depositDate" id="depositDate" class="form-control">
+                        </div>
+                        <div class="col-12 col-sm-4 p-1">
+                            <input type="number" class="form-control" name="Assembly" id="Assembly" min="0" value="0"
+                                step="1">
+                        </div>
+                        <button type="button" class="btn btn-secondary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z">
+                                </path>
+                            </svg>
+                            Add More Deposits
+                        </button>
+                        <hr>
+
+                        <div class="col-12 col-sm-3 p-1">
+                            <label class="form-control bg-info" for="bankDepositsTotal"><b>Bank Deposits
+                                    Total</b></label>
+                        </div>
+                        <div class="col-12 col-sm-9 p-1">
+                            <input type="number" class="form-control" name="bankDepositsTotal" id="bankDepositsTotal"
+                                min="0" value="0.00" step="0.1" style="background-color: lightpink;">
+                        </div>
+                    </div>
+                </div>
+                <!-- End Card Body -->
+            </div>
+        </div>
+
+        <div class="card m-1">
+            <div class="card-body">
+                <!-- End Card Title -->
+                <h5 class="card-title">Receipts</h5>
+                <!-- End Card Title -->
+                <!-- Start Card Body -->
+                <div class="card-text">
+                    <div class="row">
+                        <div class="col-12 col-sm-4 p-1">
+                            <label class="form-control bg-gray" for="SundaySchool">Receipt for Member</label>
+                        </div>
+                        <div class="col-12 col-sm-8 p-1">
+                            <select name="Assembly" id="Assembly" class="form-control"
+                                style="background-color: lightpink;">
+                                <option value="">Please Select Member</option>
+                                <option value="">Example Assembly Member 1</option>
+                                <option value="">Example Assembly Member 2</option>
+                                <option value="">Example Assembly Member 3</option>
+                                <option value="">Example Assembly Member 4</option>
+                                <option value="">Example Assembly Member 5</option>
+                            </select>
+                        </div>
+
+                        <div class="col-6 col-sm-2 p-1">
+                            <label class="form-control bg-gray" for="SundaySchool">Income Type</label>
+                        </div>
+                        <div class="col-6 col-sm-2 p-1">
+                            <select name="Assembly" id="Assembly" class="form-control"
+                                style="background-color: lightpink;">
+                                <option value="">Please Select Type</option>
+                                <option value="">Tithes</option>
+                                <option value="">Assembly Offerings</option>
+                                <option value="">Sunday School</option>
+                                <option value="">Youth</option>
+                                <option value="">Women</option>
+                                <option value="">Men</option>
+                                <option value="">Welfare</option>
+                                <option value="">Conference</option>
+                                <option value="">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="col-6 col-sm-2 p-1">
+                            <label class="form-control bg-gray" for="IncomeVal">Total</label>
+                        </div>
+                        <div class="col-6 col-sm-2 p-1">
+                            <input type="number" class="form-control" name="IncomeVal" id="IncomeVal" min="0"
+                                value="0.00" step="0.1">
+                        </div>
+                        <div class="col-6 col-sm-2 p-1">
+                            <label class="form-control bg-gray" for="IncomeDat">Date</label>
+                        </div>
+                        <div class="col-6 col-sm-2 p-1">
+                            <input type="date" class="form-control" name="IncomeDat" id="IncomeDat">
+                        </div>
+                        <div class="col-12 col-sm-8 p-1">
+                            <label class="form-control bg-gray text-red" for="IncomeDat">Apon confirmation and SMS &
+                                Email will be sent to the member and Assembly administrator</label>
+                        </div>
+                        <div class="col-12 col-sm-4 p-1">
+                            <div class="badge bg-warning form-control m-1 p-2" style="color: #000;">
+                                <input type="checkbox" id="flexCheckConfirm" class="float-start">
+                                I Hereby Confirm
+                            </div>
+                        </div>
+
+                        <button type="button" class="btn btn-secondary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z">
+                                </path>
+                            </svg>
+                            Add More Receipts
+                        </button>
+                        <hr>
+
+                        <div class="col-12 col-sm-3 p-1">
+                            <label class="form-control bg-info" for="receiptsTotal"><b>Receipts
+                                    Total</b></label>
+                        </div>
+                        <div class="col-12 col-sm-9 p-1">
+                            <input type="number" class="form-control" name="receiptsTotal" id="receiptsTotal" min="0"
+                                value="0.00" step="0.1" style="background-color: lightpink;">
+                        </div>
+                    </div>
+                </div>
+                <!-- End Card Body -->
+            </div>
+        </div>
+        <br><br><br><br><br>
+        <div class="card m-1">
+            <div class="card-body">
+                <!-- Start Card Title -->
+                <!-- End Card Title -->
+                <!-- Start Card Body -->
+                <div class="card-text">
+                    <div class="row">
+                        <div class="col-12 col-sm-6 p-1">
+                            <input type="submit" name="save" id="Save" class="form-control btn btn-success"
+                                value="Save">
+                        </div>
+                        <div class="col-12 col-sm-6 p-1">
+                            <input type="reset" name="cancel" id="Cancel" class="form-control btn btn-danger"
+                                value="Cancel">
+                        </div>
+                    </div>
+                </div>
+                <!-- End Card Body -->
+            </div>
+        </div>
+
+        <!-- End Page -->
+    </div>
+
+    <script>
+        //var pinContainer = document.getElementsByClassName("pin-code")[0];
+        var pinContainer = document.querySelector(".pin-code");
+        console.log('There is ' + pinContainer.length + ' Pin Container on the page.');
+
+        pinContainer.addEventListener('keyup', function (event) {
+            var target = event.srcElement;
+
+            var maxLength = parseInt(target.attributes["maxlength"].value, 10);
+            var myLength = target.value.length;
+
+            if (myLength >= maxLength) {
+                var next = target;
+                while (next = next.nextElementSibling) {
+                    if (next == null) break;
+                    if (next.tagName.toLowerCase() == "input") {
+                        next.focus();
+                        break;
+                    }
+                }
+            }
+
+            if (myLength === 0) {
+                var next = target;
+                while (next = next.previousElementSibling) {
+                    if (next == null) break;
+                    if (next.tagName.toLowerCase() == "input") {
+                        next.focus();
+                        break;
+                    }
+                }
+            }
+
+            if (target.value === '4') {
+                alert("Welcome X from Assembly")
+            }
+
+        }, false);
+
+        pinContainer.addEventListener('keydown', function (event) {
+            var target = event.srcElement;
+            target.value = "";
+        }, false);
+    </script>
+</body>
+
+</html>

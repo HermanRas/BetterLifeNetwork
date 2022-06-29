@@ -1,0 +1,18 @@
+version: "3.3"
+services:
+  wordpress-server:
+    image: wordpress:latest
+    restart: on-failure
+    volumes:
+      - "./html/:/var/www/html/"
+    ports:
+      - "8081:80"
+
+  mysql-server:
+    image: mysql:latest
+    restart: on-failure
+    environment:
+      MYSQL_ROOT_PASSWORD: root00--
+      MYSQL_DATABASE: wordpress
+      # volumes:
+      # - ./mysql/mysql-data:/var/lib/mysql

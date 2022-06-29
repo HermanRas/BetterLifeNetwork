@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <style>
+        .bg-gray {
+            background-color: aliceblue;
+        }
+
+        .card {
+            border-width: thick;
+        }
+
+        input[type=checkbox] {
+            /* Double-sized Checkboxes */
+            -ms-transform: scale(2);
+            /* IE */
+            -moz-transform: scale(2);
+            /* FF */
+            -webkit-transform: scale(2);
+            /* Safari and Chrome */
+            -o-transform: scale(2);
+            /* Opera */
+            padding: 10px;
+        }
+
+        .pin-code {
+            padding: 0;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .pin-code input {
+            border: none;
+            text-align: center;
+            width: 48px;
+            height: 48px;
+            font-size: 36px;
+            background-color: #F3F3F3;
+            margin-right: 5px;
+        }
+
+
+
+        .pin-code input:focus {
+            border: 1px solid #573D8B;
+            outline: none;
+        }
+
+
+        .pin-spin::-webkit-outer-spin-button,
+        .pin-spin::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type=number] {
+            text-align: right !important;
+        }
+    </style>
+    <title>Weekly Assembly Report</title>
+</head>
+
+<body style="background-color: #005493;">
+    <div class="container text-center my-3 p-3 rounded" style="background-color: #FFF;">
+        <img src="img/Header.png" style="width:80%;" alt="Header">
+        <h1>Weekly Assembly Report</h1>
+        <!-- Start Page -->
+
+        <div class="card m-1">
+            <div class="card-body">
+                <!-- End Card Title -->
+                <h5 class="card-title">Assembly Information</h5>
+                <!-- End Card Title -->
+                <!-- Start Card Body -->
+                <div class="card-text">
+                    <div class="row">
+                        <div class="col-12 col-sm-3 p-1">
+                            <label class="form-control bg-gray" for="Assembly">Assembly</label>
+                        </div>
+                        <div class="col-12 col-sm-9 p-1">
+                            <select name="Assembly" id="Assembly" class="form-control"
+                                style="background-color: lightpink;">
+                                <option value="">Please Select Assembly</option>
+                                <option value="">Example Assembly 1</option>
+                                <option value="">Example Assembly 2</option>
+                                <option value="">Example Assembly 3</option>
+                                <option value="">Example Assembly 4</option>
+                                <option value="">Example Assembly 5</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-sm-3 p-1">
+                            <label class="form-control bg-gray" for="Assembly">Date for Period</label>
+                        </div>
+                        <div class="col-12 col-sm-9  p-1">
+                            <input type="date" name="Date" id="Date" class="form-control"
+                                style="background-color: lightpink;">
+                        </div>
+
+                        <h1>Assembly PIN Code</h1>
+                        <div class="pin-code">
+                            <input class="pin-spin" type="number" maxlength="1" autofocus>
+                            <input class="pin-spin" type="number" maxlength="1">
+                            <input class="pin-spin" type="number" maxlength="1">
+                            <input class="pin-spin" type="number" maxlength="1">
+                        </div>
+                    </div>
+                </div>
+                <!-- End Card Body -->
+            </div>
+        </div>
+
+        <div class="card m-1">
+            <div class="card-body">
+                <!-- End Card Title -->
+                <h5 class="card-title">Receipt #AFM000001</h5>
+                <!-- End Card Title -->
+                <!-- Start Card Body -->
+                <div class="card-text">
+                    <div class="row">
+                        <div class="col-12 col-sm-4 p-1">
+                            <label class="form-control bg-gray" for="SundaySchool">Receipt for Member</label>
+                        </div>
+                        <div class="col-12 col-sm-8 p-1">
+                            <select name="Assembly" id="Assembly" class="form-control"
+                                style="background-color: lightpink;">
+                                <option value="">Please Select Member or Other</option>
+                                <option value="">Other</option>
+                                <option value="">Example Assembly Member 1</option>
+                                <option value="">Example Assembly Member 2</option>
+                                <option value="">Example Assembly Member 3</option>
+                                <option value="">Example Assembly Member 4</option>
+                                <option value="">Example Assembly Member 5</option>
+                            </select>
+                        </div>
+
+                        <div class="col-6 col-sm-2 p-1">
+                            <label class="form-control bg-gray" for="SundaySchool">Income Type</label>
+                        </div>
+                        <div class="col-6 col-sm-2 p-1">
+                            <select name="Assembly" id="Assembly" class="form-control"
+                                style="background-color: lightpink;">
+                                <option value="">Please Select Type</option>
+                                <option value="">Tithes</option>
+                                <option value="">Assembly Offerings</option>
+                                <option value="">Sunday School</option>
+                                <option value="">Youth</option>
+                                <option value="">Women</option>
+                                <option value="">Men</option>
+                                <option value="">Welfare</option>
+                                <option value="">Conference</option>
+                                <option value="">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="col-6 col-sm-2 p-1">
+                            <label class="form-control bg-gray" for="IncomeVal">Total</label>
+                        </div>
+                        <div class="col-6 col-sm-2 p-1">
+                            <input type="number" class="form-control" name="IncomeVal" id="IncomeVal" min="0"
+                                value="0.00" step="0.1">
+                        </div>
+                        <div class="col-6 col-sm-2 p-1">
+                            <label class="form-control bg-gray" for="IncomeDat">Date</label>
+                        </div>
+                        <div class="col-6 col-sm-2 p-1">
+                            <input type="date" class="form-control" name="IncomeDat" id="IncomeDat">
+                        </div>
+                        <div class="col-6 col-sm-2 p-1">
+                            <label class="form-control bg-gray" for="Other">Other Type:</label>
+                        </div>
+                        <div class="col-6 col-sm-10 p-1">
+                            <input type="text" class="form-control" id="Other" name="Other"
+                                placeholder="Receipt type" />
+                        </div>
+                        <div class="col-12 col-sm-8 p-1">
+                            <label class="form-control bg-gray text-red" for="IncomeDat">Apon confirmation and SMS &
+                                Email will be sent to the member and Assembly administrator</label>
+                        </div>
+                        <div class="col-12 col-sm-4 p-1">
+                            <div class="badge bg-warning form-control m-1 p-2" style="color: #000;">
+                                <input type="checkbox" id="flexCheckConfirm" class="float-start">
+                                I Hereby Confirm
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Card Body -->
+            </div>
+        </div>
+
+        <div class="card m-1">
+            <div class="card-body">
+                <!-- End Card Title -->
+                <h5 class="card-title">Receipt #AFM000002</h5>
+                <!-- End Card Title -->
+                <!-- Start Card Body -->
+                <div class="card-text">
+                    <div class="row">
+                        <div class="col-12 col-sm-4 p-1">
+                            <label class="form-control bg-gray" for="SundaySchool">Receipt for Member</label>
+                        </div>
+                        <div class="col-12 col-sm-8 p-1">
+                            <select name="Assembly" id="Assembly" class="form-control"
+                                style="background-color: lightpink;">
+                                <option value="">Please Select Member or Other</option>
+                                <option value="">Other</option>
+                                <option value="">Example Assembly Member 1</option>
+                                <option value="">Example Assembly Member 2</option>
+                                <option value="">Example Assembly Member 3</option>
+                                <option value="">Example Assembly Member 4</option>
+                                <option value="">Example Assembly Member 5</option>
+                            </select>
+                        </div>
+
+                        <div class="col-6 col-sm-2 p-1">
+                            <label class="form-control bg-gray" for="SundaySchool">Income Type</label>
+                        </div>
+                        <div class="col-6 col-sm-2 p-1">
+                            <select name="Assembly" id="Assembly" class="form-control"
+                                style="background-color: lightpink;">
+                                <option value="">Please Select Type</option>
+                                <option value="">Tithes</option>
+                                <option value="">Assembly Offerings</option>
+                                <option value="">Sunday School</option>
+                                <option value="">Youth</option>
+                                <option value="">Women</option>
+                                <option value="">Men</option>
+                                <option value="">Welfare</option>
+                                <option value="">Conference</option>
+                                <option value="">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="col-6 col-sm-2 p-1">
+                            <label class="form-control bg-gray" for="IncomeVal">Total</label>
+                        </div>
+                        <div class="col-6 col-sm-2 p-1">
+                            <input type="number" class="form-control" name="IncomeVal" id="IncomeVal" min="0"
+                                value="0.00" step="0.1">
+                        </div>
+                        <div class="col-6 col-sm-2 p-1">
+                            <label class="form-control bg-gray" for="IncomeDat">Date</label>
+                        </div>
+                        <div class="col-6 col-sm-2 p-1">
+                            <input type="date" class="form-control" name="IncomeDat" id="IncomeDat">
+                        </div>
+                        <div class="col-6 col-sm-2 p-1">
+                            <label class="form-control bg-gray" for="Other">Other Type:</label>
+                        </div>
+                        <div class="col-6 col-sm-10 p-1">
+                            <input type="text" class="form-control" id="Other" name="Other"
+                                placeholder="Receipt type" />
+                        </div>
+                        <div class="col-12 col-sm-8 p-1">
+                            <label class="form-control bg-gray text-red" for="IncomeDat">Apon confirmation and SMS &
+                                Email will be sent to the member and Assembly administrator</label>
+                        </div>
+                        <div class="col-12 col-sm-4 p-1">
+                            <div class="badge bg-warning form-control m-1 p-2" style="color: #000;">
+                                <input type="checkbox" id="flexCheckConfirm" class="float-start">
+                                I Hereby Confirm
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Card Body -->
+            </div>
+        </div>
+
+        <div class="card m-1">
+            <div class="card-body">
+                <!-- End Card Title -->
+                <h5 class="card-title">Receipts Summary</h5>
+                <!-- End Card Title -->
+                <!-- Start Card Body -->
+                <div class="card-text">
+                    <div class="row">
+
+                        <button type="button" class="btn btn-secondary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z">
+                                </path>
+                            </svg>
+                            Add More Receipts
+                        </button>
+                        <hr>
+
+                        <div class="col-12 col-sm-3 p-1">
+                            <label class="form-control bg-info" for="receiptsTotal"><b>Receipts
+                                    Total</b></label>
+                        </div>
+                        <div class="col-12 col-sm-9 p-1">
+                            <input type="number" class="form-control" name="receiptsTotal" id="receiptsTotal" min="0"
+                                value="0.00" step="0.1" style="background-color: lightpink;">
+                        </div>
+
+                    </div>
+                </div>
+                <!-- End Card Body -->
+            </div>
+        </div>
+
+
+
+
+        <br><br><br><br><br>
+        <div class="card m-1">
+            <div class="card-body">
+                <!-- Start Card Title -->
+                <!-- End Card Title -->
+                <!-- Start Card Body -->
+                <div class="card-text">
+                    <div class="row">
+                        <div class="col-12 col-sm-6 p-1">
+                            <input type="submit" name="save" id="Save" class="form-control btn btn-success"
+                                value="Save">
+                        </div>
+                        <div class="col-12 col-sm-6 p-1">
+                            <input type="reset" name="cancel" id="Cancel" class="form-control btn btn-danger"
+                                value="Cancel">
+                        </div>
+                    </div>
+                </div>
+                <!-- End Card Body -->
+            </div>
+        </div>
+
+        <!-- End Page -->
+    </div>
+
+    <script>
+        //var pinContainer = document.getElementsByClassName("pin-code")[0];
+        var pinContainer = document.querySelector(".pin-code");
+        console.log('There is ' + pinContainer.length + ' Pin Container on the page.');
+
+        pinContainer.addEventListener('keyup', function (event) {
+            var target = event.srcElement;
+
+            var maxLength = parseInt(target.attributes["maxlength"].value, 10);
+            var myLength = target.value.length;
+
+            if (myLength >= maxLength) {
+                var next = target;
+                while (next = next.nextElementSibling) {
+                    if (next == null) break;
+                    if (next.tagName.toLowerCase() == "input") {
+                        next.focus();
+                        break;
+                    }
+                }
+            }
+
+            if (myLength === 0) {
+                var next = target;
+                while (next = next.previousElementSibling) {
+                    if (next == null) break;
+                    if (next.tagName.toLowerCase() == "input") {
+                        next.focus();
+                        break;
+                    }
+                }
+            }
+
+            if (target.value === '4') {
+                alert("Welcome X from Assembly")
+            }
+
+        }, false);
+
+        pinContainer.addEventListener('keydown', function (event) {
+            var target = event.srcElement;
+            target.value = "";
+        }, false);
+    </script>
+</body>
+
+</html>
